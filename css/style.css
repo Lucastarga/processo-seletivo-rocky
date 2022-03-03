@@ -1,0 +1,912 @@
+:root{
+    --text-white: #fff;
+    --text-dark: #000;
+    --text-alert: #EEE50B;
+    --bg-btn: #1CD4E9;
+    --bg-btn-hover: #1DC2D5;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* inicio classes gerais */
+
+.container{
+    margin: 0 3.75rem;
+}
+
+.text-alert{
+    color: var(--text-alert);
+}
+
+.text-link{
+    color: var(--bg-btn);
+}
+
+.img-reduced{
+    width: 9.375rem;
+    margin-right: 3.125rem;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.img-fluid{
+    max-width: 80% !important;
+}
+
+main.page-content{
+    overflow-x: hidden;
+    background: url('../image/bg-index.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.arrow{
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+div.arrow a{
+    display: inline-block;
+    color: #fff;
+
+}
+
+div.arrow svg{
+    width: 25px;
+    height: 25px;
+}
+
+/* fim classes gerais */
+
+
+
+
+/******************** inicio header *********************/
+
+header{
+    width: 100vw;
+    padding: 1rem;
+    color: var(--text-white);
+    position: fixed;
+    z-index: 999; 
+    transition: all .5s;
+}
+
+
+
+header div.container-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img.logo-mobile{
+    display: none;
+}
+
+
+header button#btn-mobile{
+    display: none;
+}
+
+header div.container-menu a{
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    transition:  .3s;
+}
+
+header div.container-menu a:hover{
+    color: var(--bg-btn);
+}
+
+header div.container-menu ul{
+    display: inline-flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+header div.container-menu li,
+header div.container-menu li a
+{
+   text-align: center;
+   font-weight: 600;
+}
+
+/* ******** efeito ao scroll no header ***** */
+header.bg-scroll{
+    background: #fff;
+    padding: 1rem;
+    color: var(--text-dark);
+    position: fixed;
+    z-index: 999;
+    transition: all .5s;
+    
+}
+
+header.bg-scroll div.container-logo img{
+    filter: invert(100%);
+}
+
+header.bg-scroll nav ul a{
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    transition:  .3s;
+}
+
+/* ******** fim do efeito ao scroll no header ***** */
+
+/* ********************** inicio hero ***************** */
+
+section.hero{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url("../image/bg-web.png");
+    background-position: center;
+    background-size: cover;
+}
+
+section.hero a.btn-contact{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-white);
+    padding: 1.25rem 1.875rem;
+    border-radius: 10rem;
+    background-color: var(--bg-btn);
+    width: max-content;
+    height: max-content;
+    margin-bottom: 3.125rem;
+    transition: .3s;
+}
+
+section.hero a.btn-contact:hover{
+    background-color: var(--bg-btn-hover);
+}
+
+div.title-hero{
+    color: var(--text-white);
+    text-align: center;
+    margin-top: 25vh;
+}
+
+div.title-hero h2{
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+div.description-hero{
+    width: 60%;
+    margin: 3rem auto 6rem;
+    text-align: center;
+}
+
+
+/* ******************** inicio about ************* */
+
+section.about,
+section.services,
+section.diferenciais,
+section.contact{
+    width: 100vw;
+    height: max-content;
+    padding: 4.5rem 2rem 3.125rem 2rem;
+}
+
+h2.title-about,
+h2.title-services,
+h2.title-diferenciais{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+section.about div.content-about{
+    margin-top: 3.125rem;
+    width: 60%;
+    height: max-content;
+    padding: 1.875rem;
+    border-radius: 2px;
+    box-shadow: 10px 10px 50px 0 rgba(0, 0, 0, 10%);
+    background-color: #fff;
+}
+
+/* ************************** inicio services *********** */
+
+section.services div.content-services{
+    width: 100%;
+    margin-top: 6.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section.services div.box-container{
+    color: var(--text-white);
+    width: calc(100% / 3 - 1rem);
+    height: max-content;
+    padding: 3.125rem 1.25rem;
+    text-align: center;
+    border-radius: 1.25rem;
+}
+
+section.services div.box-container:nth-child(1){
+    background: url(../image/ft1.png);  
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.services div.box-container:nth-child(2){
+    background: url(../image/ft2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.services div.box-container:nth-child(3){
+    background: url(../image/ft3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.services div.box-content{
+    width: 90%;
+    margin: 1.25rem auto;
+}
+
+section.services div.box-content h3{
+    color: var(--text-alert);
+    margin-bottom: 1.25rem;
+}
+
+
+/* ************** inicio diferenciais **************** */
+section.diferenciais div.content-diferenciais{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6.25rem;
+}
+
+section.diferenciais div.box-diferenciais{
+    padding: 1.875rem;
+    width: 25%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--text-white);
+    text-align: center;
+    border-radius: 1.25rem;
+}
+
+section.diferenciais div.box-diferenciais:nth-child(1){
+    background: url("../image/ft4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.diferenciais div.box-diferenciais:nth-child(2){
+    background: url("../image/ft5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.diferenciais div.box-diferenciais:nth-child(3){
+    background: url("../image/ft6.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.diferenciais div.box-diferenciais div.box-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+
+
+/* ************* inicio contact *********** */
+section.contact{
+    border-top: 50px solid #EFE60B;
+    background-color: #000;
+    color: var(--text-white);
+}
+
+section.contact div.container-contact{
+    display: flex;
+    justify-content: space-between;
+}
+
+section.contact div.container-adress{
+    width: 60%;
+}
+
+section.contact div.form-submit{
+    width: 40%;
+}
+
+section.contact div.adress-social-media{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+section.contact div.adress-social-media img{
+    margin-right: 70px;
+    width: 150px;
+}
+
+section.contact div.adress-social-media a{
+    display: flex;
+    margin: 0 1.25rem;
+}
+
+section.contact div.adress-social-media svg{
+    width: 2rem;
+    height: 2rem;
+}
+
+section.contact  address{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+}
+
+section.contact address svg{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+section.contact address .mail{
+    white-space: nowrap;
+    width: 50%;
+}
+
+section.contact address .tel{
+    width: 45%;
+    text-align: end;
+}
+
+section.contact address .endereco{
+    margin-top: 10px;
+}
+
+section.contact div.info{
+    margin-top: 50px;
+    width: 70%;
+}
+
+section.contact div.form-submit form{
+    display: flex;
+    flex-direction:  column;
+    justify-content: space-evenly;
+    padding: 15px;
+    background-color: #818181;
+    height: 500px;
+}
+
+section.contact div.form-submit form input{
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+section.contact div.form-submit form textarea{
+    width: auto;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 300px;
+    min-height: 100px;
+    padding: 10px;
+    font-size: 1.2rem;
+    outline: none;
+
+}
+
+section.contact div.form-submit form button{
+    color: var(--text-white);
+    background-color: var(--bg-btn);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 0.625rem;
+    border: none;
+}
+
+section.contact div.form-submit form input::placeholder,
+section.contact div.form-submit form textarea::placeholder
+ {
+    color: #aaaaaa;
+}
+
+/* *************************** inicio footer ******************* */
+footer{
+    width: 100vw;
+    padding: 1.875rem;
+    text-align: center;
+    background-color: #EFE60B;
+    font-weight: bold;
+}
+
+
+/* ******** media queries ******************** */
+
+@media (max-width: 992px){
+    body *{
+        font-size: .8rem;
+    }
+
+    /* ********** classes gerais ********** */
+    .container{
+        margin: 0 1.875rem;
+    }
+
+    .img-reduced{
+        width: 120px;
+        margin-right: 1.875rem;
+    }
+
+    /* ***************** inicio hero ***************** */
+    section.hero div.title-hero{
+        margin-top: 20vh;
+    }
+
+    section.hero div.title-hero h2{
+        font-size: 5rem;
+    }
+
+    section.hero div.description-hero{
+        width: 100%;
+    }
+
+    /* ************ inicio about ************ */
+    section.about div.content-about{
+        width: 90%;
+    }
+
+    /* *************** inicio services ********** */
+    section.services{
+        width: 100vw;
+        height: max-content;
+    }
+
+    section.services div.content-services{
+        margin-top: 50px;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+
+    section.services div.box-container{
+        width: 45%;
+    }
+
+    section.services div.box-content h3{
+        font-size: 16px;
+    }
+
+    /* ************** inicio diferenciais ********** */
+    section.diferenciais div.content-diferenciais{
+        margin-top: 50px;
+    }
+
+    section.diferenciais div.box-diferenciais{
+        width: 30%;
+    }
+
+    /* ****************** inicio contact ************ */
+
+    section.contact div.adress-social-media{
+        flex-wrap: nowrap;
+    }
+
+    section.contact div.adress-social-media img{
+        width: 120px;
+    }
+
+    section.contact div.center a{
+        margin: 0 5px;
+    }
+    section.contact address svg{
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 768px){
+
+    /* ************* inicio classes gerais ********** */
+    .container{
+        margin: 0 20px;
+    }
+
+
+    /* ************ inicio header ******** */
+
+    header{
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    header div.container-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    } 
+
+    header div.container-logo{
+        order: 2;
+    }
+
+
+
+    header img.logo-mobile{
+        display: block;
+    }
+
+    header img.img-reduced{
+        display: none;
+    }
+
+    /* ********** menu mobile *************** */
+    header button#btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        border: none;
+        background: none;
+        position: relative;
+        z-index: 9999;
+        gap: .5rem;
+    }
+
+    span#hamburguer{
+        display: block;
+        width: 30px;
+        border-top: 2px solid #fff ;
+        color: #fff;
+    }
+
+    .bg-hamburguer{
+        color: #000 !important;
+    }
+
+
+
+    span#hamburguer::after,
+    span#hamburguer::before{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: currentColor;
+        margin-top:5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+
+    }
+
+    #nav.active #hamburguer::before{
+       transform: rotate(135deg);
+        
+    }
+
+    #nav.active #hamburguer::after{
+       transform: rotate(-135deg);
+       top: -7px;
+        
+        
+    }
+
+    .move-btn{
+        animation: move-btn .5s alternate;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    #menu{
+        display: none;
+        position: absolute;
+        padding: 50px 0 30px 0;
+        top: 0 ;
+        left: 0;
+        border-radius: 0 10px 10px 0;
+        background-color: rgba(255, 255, 255, .2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 1000;
+        animation: move-menu .5s alternate;
+        -webkit-animation-fill-mode: forwards;
+        
+    }
+
+    header nav#nav.active ul#menu li{
+        padding: 5px 20px;
+    }
+
+    header nav#nav.active ul#menu li a{
+       border-bottom: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    #nav.active #menu{
+        display: block;
+        width: 60vw;
+    }
+
+    @keyframes move-btn {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(35vw);
+        }
+
+    }
+
+    @keyframes move-menu {
+        0% {
+            margin-left: -50vw;
+            visibility: hidden;
+        }
+        100% {
+            margin-left: 0;
+            visibility: visible;
+        }
+    }
+
+    /* *********** fim menu mobile *********** */
+
+    /* *************** inicio hero ************ */
+    section.hero div.title-hero{
+        margin-top: 30vh;
+    }
+
+    section.hero div.title-hero h2{
+        font-size: 3.75rem;
+    }
+
+    section.hero div.description-hero{
+        width: 90%;
+        margin: 2rem auto;
+    }
+
+    /* *********** inicio contact ********** */
+
+    section.hero a.btn-contact{
+        padding: 20px 15px;
+        transform: scale(.9);
+    }
+
+    section.contact address p.tel,
+    section.contact address p.mail{
+        width: max-content;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* ********** inicio classes gerais ********** */
+    .container{
+        margin: 0 10px;
+    }
+
+    body *{
+        font-size: .70rem;
+    }
+
+    h2.title-about,
+    h2.title-services,
+    h2.title-diferenciais{
+    font-size: 2rem;
+    text-transform: uppercase;
+    }
+
+    section.about,
+    section.services,
+    section.diferenciais,
+    section.contact{
+        padding: 10px;
+        margin-bottom: 1.875rem;
+    }   
+
+    /* *********** inicio hero *************** */
+
+    section.hero{
+        background: url("../image/bg-mobile.png");
+        background-size: 100%;
+        background-position: center ;
+        
+    }
+
+    section.hero div.title-hero{
+       padding: 0 15px;
+    }
+
+    section.hero div.title-hero h2{
+        font-size: 2.9rem; 
+    }
+
+    section.hero a.btn-contact{
+        transform: scale(.7);
+    }
+
+    section.hero div.description-hero{
+        width: 100%;
+    }
+
+    /* *************** inicio about ******************* */
+    section.about div.content-about{
+        width: 100%;
+        margin-top: 1.875rem;
+    }
+
+    /* ********* inicio services ******** */
+    section.services div.content-services{
+        margin-top: 1.875rem;
+        gap: 20px;
+    }
+
+    section.services div.box-container{
+        width: 100%;
+    }
+
+    section.services div.box-container:nth-child(1){
+        background: url('../image/ft1-mobile.png');
+        background-size: cover;
+    }
+
+    section.services div.box-container:nth-child(2){
+        background: url('../image/ft2-mobile.png');
+        background-size: cover;
+    }
+
+    section.services div.box-container:nth-child(3){
+        background: url('../image/ft3-mobile.png');
+        background-size: cover;
+    }
+
+    /* |********** inicio diferenciais ************** */
+    section.diferenciais div.content-diferenciais{
+        margin-top: 1.875rem;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    section.diferenciais div.box-diferenciais{
+        width: 100%;
+    }
+
+    section.diferenciais div.box-diferenciais:nth-child(1){
+        background: url('../image/ft4-mobile.png');
+        background-size: cover;
+        background-position: -100px;
+    }
+
+    section.diferenciais div.box-diferenciais:nth-child(2){
+        background: url('../image/ft5-mobile.png');
+        background-size: cover;
+    }
+
+    section.diferenciais div.box-diferenciais:nth-child(3){
+        background: url('../image/ft6-mobile.png');
+        background-size: cover;
+        background-position: -90px;
+    }
+
+    /* *************** inicio contact ***************** */
+    section.contact div.container-contact{
+        flex-wrap: wrap;
+    }
+
+    section.contact div.container-adress{
+        width: 100%;
+    }
+
+    section.contact div.form-submit{
+        margin-top: 1.875rem;
+        width: 100%;
+    }
+
+    section.contact div.adress-social-media{
+        width: 100%;
+    }
+
+    section.contact address{
+        width: 100%;
+    }
+
+    section.contact div.info{
+        width: 100%;
+    }
+
+    section.contact div.form-submit form input{
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 400px){
+    body {
+        font-size: .65rem;
+    }
+
+    section.hero div.title-hero h2{
+        font-size: 2.2rem; 
+    }
+
+    section.hero div.description-hero{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
